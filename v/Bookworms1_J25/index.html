@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookworms 1 — ReStaq</title>
+  <meta name="description" content="The card list of the Bookworms 1 Jumpstart Packet — Foundations Jumpstart.">
+  <style>
+    :root {
+      --canvas: #f5efe2;
+      --surface: #fbf6ec;
+      --ink: #241a0c;
+      --ink2: #7a6b4f;
+      --ink3: #9a8a6c;
+      --gold: #8a6426;
+      --hairline: rgba(36, 26, 12, 0.1);
+      --band-a: #e9dcbe;
+      --band-b: #f5efe2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --canvas: #000000;
+        --surface: #14100a;
+        --ink: #f4ecdd;
+        --ink2: #b0a48c;
+        --ink3: #6e624e;
+        --gold: #e8a13f;
+        --hairline: rgba(244, 236, 221, 0.1);
+        --band-a: #2b2210;
+        --band-b: #000000;
+      }
+    }
+    * { margin: 0; box-sizing: border-box; }
+    body {
+      background: var(--canvas);
+      color: var(--ink);
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .band {
+      width: 100%;
+      background: linear-gradient(180deg, var(--band-a), var(--band-b));
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 128px;
+    }
+    .band-inner {
+      width: 100%;
+      max-width: 34em;
+      padding: 40px 24px 8px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    h1 sup {
+      color: var(--gold);
+      font-size: 0.55em;
+      font-weight: 800;
+    }
+    main {
+      width: 100%;
+      max-width: 34em;
+      padding: 12px 24px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .wb {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .wb .re { color: var(--gold); }
+    .wb span.sub {
+      color: var(--ink3);
+      font-weight: 500;
+      margin-left: 6px;
+      font-size: 0.75rem;
+    }
+    .wmeta {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+    .wnote { font-size: 0.85rem; color: var(--ink2); }
+    .wlist {
+      list-style: none;
+      padding: 0;
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 6px 14px;
+    }
+    .row + .row { border-top: 1px solid var(--hairline); }
+    .rname { font-size: 0.9rem; flex: 1; }
+    .wild .rname { color: var(--ink2); }
+    .pips { display: inline-flex; gap: 3px; flex: none; }
+    .pip {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      color: #1a1611;
+      font: 700 9.5px/15px -apple-system, BlinkMacSystemFont, sans-serif;
+      font-style: normal;
+      text-align: center;
+    }
+    .pip.hybrid { font-size: 6.5px; letter-spacing: -0.02em; }
+    .pr {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.7rem;
+      color: var(--ink3);
+      flex: none;
+    }
+    .waccount { font-size: 0.75rem; color: var(--ink3); }
+    .wcta {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--ink2);
+    }
+    footer {
+      width: 100%;
+      max-width: 34em;
+      color: var(--ink3);
+      font-size: 0.65rem;
+      line-height: 1.55;
+      margin-top: auto;
+      padding: 16px 24px 24px;
+    }
+    footer p {
+      border-top: 1px solid var(--hairline);
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="band">
+    <div class="band-inner">
+      <h1>Bookworms<sup aria-label="variation 1">1</sup></h1>
+    </div>
+  </header>
+  <main>
+    <p class="wb"><span class="re">Re</span>Staq<span class="sub">· shared Packet</span></p>
+    <p class="wmeta">Theme Bookworms · Set Foundations Jumpstart (J25) · 20-card Packet</p>
+    <p class="wnote">You tapped the Sticker on a ReStaq box. Here&rsquo;s what lives inside.</p>
+    <ul class="wlist">
+      <li class="row"><span class="rname">Blink of an Eye</span><span class="pips" role="img" aria-label="Mana cost {1}{U}"><i class="pip" style="background:#cac5c0">1</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #289</span></li>
+      <li class="row"><span class="rname">Cartouche of Knowledge</span><span class="pips" role="img" aria-label="Mana cost {1}{U}"><i class="pip" style="background:#cac5c0">1</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #295</span></li>
+      <li class="row"><span class="rname">Faerie Vandal</span><span class="pips" role="img" aria-label="Mana cost {1}{U}"><i class="pip" style="background:#cac5c0">1</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #311</span></li>
+      <li class="row"><span class="rname">3× Island</span><span class="pr">J25 #84</span></li>
+      <li class="row"><span class="rname">2× Island</span><span class="pr">J25 #85</span></li>
+      <li class="row"><span class="rname">2× Island</span><span class="pr">J25 #86</span></li>
+      <li class="row"><span class="rname">Lat-Nam Adept</span><span class="pips" role="img" aria-label="Mana cost {3}{U}"><i class="pip" style="background:#cac5c0">3</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #320</span></li>
+      <li class="row"><span class="rname">Mystic Skyfish</span><span class="pips" role="img" aria-label="Mana cost {2}{U}"><i class="pip" style="background:#cac5c0">2</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #331</span></li>
+      <li class="row"><span class="rname">Overflowing Insight</span><span class="pips" role="img" aria-label="Mana cost {4}{U}{U}{U}"><i class="pip" style="background:#cac5c0">4</i><i class="pip" style="background:#c1d7e9">U</i><i class="pip" style="background:#c1d7e9">U</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #341</span></li>
+      <li class="row"><span class="rname">Reckless Scholar</span><span class="pips" role="img" aria-label="Mana cost {2}{U}"><i class="pip" style="background:#cac5c0">2</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #348</span></li>
+      <li class="row"><span class="rname">Shore Keeper</span><span class="pips" role="img" aria-label="Mana cost {U}"><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #355</span></li>
+      <li class="row"><span class="rname">Sky-Eel School</span><span class="pips" role="img" aria-label="Mana cost {3}{U}{U}"><i class="pip" style="background:#cac5c0">3</i><i class="pip" style="background:#c1d7e9">U</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #359</span></li>
+      <li class="row"><span class="rname">Starlight Snare</span><span class="pips" role="img" aria-label="Mana cost {2}{U}"><i class="pip" style="background:#cac5c0">2</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #9</span></li>
+      <li class="row"><span class="rname">Syr Elenora, the Discerning</span><span class="pips" role="img" aria-label="Mana cost {3}{U}{U}"><i class="pip" style="background:#cac5c0">3</i><i class="pip" style="background:#c1d7e9">U</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #64</span></li>
+      <li class="row"><span class="rname">Thriving Isle</span><span class="pr">J25 #778</span></li>
+      <li class="row"><span class="rname">Trial of Knowledge</span><span class="pips" role="img" aria-label="Mana cost {3}{U}"><i class="pip" style="background:#cac5c0">3</i><i class="pip" style="background:#c1d7e9">U</i></span><span class="pr">J25 #379</span></li>
+    </ul>
+    <p class="waccount">20 cards.</p>
+    <p class="wcta">ReStaq isn&rsquo;t in the App Store yet — ask this Packet&rsquo;s owner about it.</p>
+  </main>
+  <footer>
+    <p>ReStaq is unofficial Fan Content permitted under the Fan Content Policy.
+    Not approved/endorsed by Wizards. Portions of the materials used are
+    property of Wizards of the Coast. &copy;Wizards of the Coast LLC.</p>
+  </footer>
+</body>
+</html>

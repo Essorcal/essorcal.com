@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["2GQH6C4C5W.com.essorcal.jumpstart"],
+        "components": [
+          {
+            "/": "/p/*",
+            "comment": "Packet sticker links (ADR-0008): /p/<packet-uuid>?v=<variation-hint>"
+          }
+        ],
+        "paths": ["/p/*"]
+      }
+    ]
+  }
+}
